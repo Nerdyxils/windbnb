@@ -1,20 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { BsPlusSquare } from 'react-icons/bs'
 import { AiOutlineMinusSquare } from 'react-icons/ai'
 
 import './guest.style.css'
 
-export default function Guest({age, stage, handleDecrease, handleIncrease, increasing, handleDecreaseAge, handleIncreaseAge, increasingAge}) {
+export default function Guest({ changeChildren, changeAdults, adults, Children }) {
+
+    const [numAdults, setNumAdults] = useState(adults);
+    const [numChildren, setNumChildren] = useState(Children);
+
+    useEffect(() => {
+        changeAdults(numAdults);
+        changeChildren(numChildren)
+    }, [numAdults, numChildren, changeAdults, changeChildren])
 
     return (
-        <>
-            <h4>{stage}</h4>
-            <p>{age}</p>
-            <div className="number">
-                <AiOutlineMinusSquare onClick={handleDecrease} onClick={handleDecreaseAge} className="icon_btn m_ed"/>
-                    <p>{increasing}{increasingAge}</p>
-                <BsPlusSquare onClick={handleIncrease} onClick={handleIncreaseAge} className="icon_btn"/>
+        <div className="guest_selector">
+            <div className="selector">
+                <h4>Adults</h4>
+                <p>Ages 13 or above</p>
+                <div className="number">
+                    <AiOutlineMinusSquare onClick={() => numAdults > 0 && setNumAdults(numAdults -1 )} className="icon_btn m_ed"/>
+                        <span>{numAdults}</span>
+                    <BsPlusSquare onClick={() => setNumAdults(numAdults +1)} className="icon_btn"/>
+                </div>
             </div>
-        </>
+
+            <div className="selector">
+                <h4>Children</h4>
+                <p>Ages 2-12</p>
+                <div className="number">
+                    <AiOutlineMinusSquare onClick={() => numChildren > 0 && setNumChildren(numChildren -1 )} className="icon_btn m_ed"/>
+                        <p>{numChildren}</p>
+                    <BsPlusSquare onClick={() => setNumChildren(numChildren +1)} className="icon_btn"/>
+                </div>
+            </div>
+        </div>
     )
 }
