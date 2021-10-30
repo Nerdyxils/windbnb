@@ -28,6 +28,7 @@ export default function HeaderComponent() {
         {guest.length && setRoom(guest)}
         setShowing('');
     }
+    
     return (
         <div className="header">
             <Logo/>

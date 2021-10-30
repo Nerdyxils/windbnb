@@ -1,0 +1,27 @@
+.guest-tab h4 {
+    font-size: 14px;
+    color: #333;
+    padding: 5px 0;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+}
+
+.icon_btn {
+    height: 23px;
+    width: 23px;
+    border: none;
+    cursor: pointer;
+}
+
+.m_ed {
+    width: 33px !important;
+    height: 28px !important;
+}
+
+.number p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
