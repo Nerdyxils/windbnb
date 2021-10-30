@@ -1,0 +1,39 @@
+.card-item {
+    display: block;
+    margin-top: 50px;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.s_icon {
+    font-size: 16px;
+    color: var(--Main-Color-Red);
+    align-self: center;
+    margin-right: 5px;
+}
+
+.card-item img {
+    max-width: 100%;
+    width: 395px;
+    height: 269px;
+    border-radius: 24px;
+}
+
+.super_host {
+    padding: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.63px;
+    color: #4f4f4f;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 2px solid #4f4f4f;
+}

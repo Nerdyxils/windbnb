@@ -1,0 +1,50 @@
+:root {
+  /* MAIN FONTS */
+  --Font-Main : 'Montserrat', sans-serif;
+  --Font-sub : 'Mulish', sans-serif;
+
+  /* MAIN FONT COLORS */
+  --Font-Color-Dark : #333333;
+  --Font-Color-Dark02 : #4f4f4f;
+  --Font-Color-Light : #828282;
+
+  /* COLORS */
+  --Main-Color-Red :#EB5757E5;
+}
+
+h1 {
+  font-family: var(--Font-Main);
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 31.26px;
+  color: var(--Font-Color-Dark);
+}
+
+h2 {
+  font-family: var(--Font-Main);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29.26px;
+  color: var(--Font-Color-Dark);
+}
+
+h4, h5 {
+  font-size: 16px;
+  line-height: 19.5px;
+  font-family: var(--Font-Main);
+}
+
+p {
+  font-size: 14px;
+  line-height: 12.07px;
+  font-family: var(--Font-Main);
+  font-weight: 500;
+  color: var(--Font-Color-Light);
+}
+
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
