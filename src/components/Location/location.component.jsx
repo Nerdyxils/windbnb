@@ -8,7 +8,12 @@ export default function Location({ cities, pickCity }) {
             {
                 cities && [...cities].map((city, index) => {
                     return (
-                        <p style={{fontSize: '14px', fontFamily: 'Mulish, sans-serif', lineHeight: '18px'}} key={index} onClick={() => pickCity(city)}>
+                        <p style={{fontSize: '14px', 
+                                    fontFamily: 'Mulish, sans-serif', 
+                                    lineHeight: '18px', 
+                                    margin: '50px auto',
+                                    cursor: 'pointer',
+                                    }} key={index} onClick={() => pickCity(city)}>
                             <BiLocationPlus/>{city}, Finland
                         </p>
                     )

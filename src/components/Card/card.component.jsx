@@ -10,7 +10,7 @@ export default function CardComponent() {
         <div className="card-row">
             {
                 data.map((datas) => {
-                    return <CardList key={datas.title} {...datas}/>
+                    return <CardList key={datas.title} {...datas} />
                 })
             }
         </div>
