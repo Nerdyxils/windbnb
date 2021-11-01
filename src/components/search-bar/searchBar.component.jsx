@@ -5,7 +5,7 @@ import DrawerFilter from '../Drawer/DrawerFilter.component';
 import rooms from '../../stays.json'
 import './searchBar.style.css'
 
-export default function SearchBar({place, getFilteredData, showAll}) {
+export default function SearchBar({ place, getFilteredData }) {
 
     const [menu, setMenu] = useState(null)
     const [cities, setCities] = useState([]);
@@ -71,7 +71,7 @@ export default function SearchBar({place, getFilteredData, showAll}) {
                     changeAdultsNum={(num) => setNumAdults(num)}
                     changeChildrenNum={(num) => setNumChildren(num)}
                     getFilteredData={(numAdults, numChildren, pickedLocation) => 
-                    getFilteredData(numAdults, numChildren, pickedLocation)}
+                        getFilteredData(numAdults, numChildren, pickedLocation)}
                 />
             </Drawer>
         </>

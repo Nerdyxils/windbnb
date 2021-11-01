@@ -31,7 +31,7 @@ export default function Guest({ changeChildren, changeAdults, adults, Children }
                 <p>Ages 2-12</p>
                 <div className="number">
                     <AiOutlineMinusSquare onClick={() => numChildren > 0 && setNumChildren(numChildren -1 )} className="icon_btn m_ed"/>
-                        <p>{numChildren}</p>
+                        <span>{numChildren}</span>
                     <BsPlusSquare onClick={() => setNumChildren(numChildren +1)} className="icon_btn"/>
                 </div>
             </div>

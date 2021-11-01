@@ -31,6 +31,11 @@
     color: #bdbdbd;
 }
 
+.location:focus {
+    border: 1px solid #333;
+    border-radius: 16px;
+}
+
 .location span,
 .guests span {
     display: block;
@@ -38,11 +43,17 @@
     font-weight: bold;
     color: #333;
 }
-/* nav .form_inputs {
-    margin: 40px auto;
-    align-items: center;
-    border-radius: 16px;
-    width: 80%;
-    border: 1px solid rgb(0, 0, 0, 0.2);
-    justify-content: space-between;
-} */
+
+.location_out {
+    font-size: 14px; 
+    font-family: 'Mulish, sans-serif'; 
+    /* line-height: 18px; */
+    
+    cursor: pointer;
+}
+
+.location_out:hover {
+    width: 100%;
+    padding: 10px 0;
+    background: #ccc;
+}

@@ -21,7 +21,7 @@ const DrawerFilter = ({
     const [pickedMenu, setPickedMenu] = useState(menu);
 
     const [numAdults, setNumAdults] = useState(adults);
-    const [numChildren, setNumChildren] = useState(children)
+    const [numChildren, setNumChildren] = useState(children);
 
 
 
@@ -37,7 +37,7 @@ const DrawerFilter = ({
 
                         <div className="guests" onClick={() => setPickedMenu("guestsMenu")}>
                             <span>GUESTS</span>
-                            {numChildren === 0 && numAdults === 0 ? "Add guests" : <p className="numGuests">{numAdults + numChildren} guests</p>}
+                            {numAdults === 0 && numChildren === 0 ? "Add guests" : <p className="numGuests">{numAdults + numChildren} guests</p>}
                         </div>
 
                         <div className="search">
