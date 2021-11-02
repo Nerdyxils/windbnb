@@ -4,13 +4,14 @@ import listings from '../../stays.json'
 import './card.style.css'
 
 export default function CardComponent() {
-    const [data, setData] = useState(listings)
-    
+    // eslint-disable-next-line
+    const [items, setItems] = useState(listings);
+  
     return (
         <div className="card-row">
             {
-                data.map((datas) => {
-                    return <CardList key={datas.title} {...datas} />
+                items.map((item) => {
+                    return <CardList key={item.title} {...item} />
                 })
             }
         </div>

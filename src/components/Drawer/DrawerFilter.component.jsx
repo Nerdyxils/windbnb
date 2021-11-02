@@ -8,16 +8,15 @@ import LocationsMenu from '../Location/location.component'
 
 const DrawerFilter = ({
     toggleShow, 
-    changeAdultsNum,
-    changeChildrenNum,
-    getFilteredData,
     menu,
     cities,
     location,
-    adults,
     children,
-    changeCity
-}) => {
+    adults,
+    changeCity,
+    changeAdultsNum,
+    changeChildrenNum,
+    getFilteredData}) => {
     const [pickedLocation, setPickedLocation] = useState(location);
     const [pickedMenu, setPickedMenu] = useState(menu);
 
@@ -31,7 +30,7 @@ const DrawerFilter = ({
             <div className="overlay_nav">
                 <nav>
                     <div className="form_inputs">
-                        <div className="location locationBtn" onClick={() => setPickedMenu("locationsMenu")}>
+                        <div className="location locationBtn" onClick={() => setPickedMenu("locationMenu")}>
                             <span>LOCATION</span>
                             {pickedLocation ? <p className="location">{pickedLocation}, Finland</p> : "Add City"}
                         </div>
@@ -50,7 +49,7 @@ const DrawerFilter = ({
                                     changeCity(pickedLocation);
                                     changeAdultsNum(numAdults);
                                     changeChildrenNum(numChildren);
-                                    getFilteredData(numAdults, numChildren, pickedLocation)
+                                    getFilteredData(numAdults, numChildren, pickedLocation);
                                 }}>
                                 <FaSearch />Search
                             </button>

@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
 import HeaderComponent from './components/Header/header.component';
-import CardComponent from './components/Card/card.component';
 import data from './stays.json'
+import CardComponent from './components/Card/card.component';
 
 const App = () => {
   const [location, setLocation] = useState(null);
@@ -42,7 +42,7 @@ const App = () => {
               )
           }
       }
-      if (totalGuests === 0 && city === null) getAllProperties()
+      // if (totalGuests === 0 && city === null) getAllProperties()
   };
 
   return (
@@ -52,13 +52,13 @@ const App = () => {
               changeCity={(val) => changeCity(val)}
               getFilteredData={(children, adults, city) => 
                   getFilteredData(children, adults, city)}
-              showAll ={() => getAllProperties()}
+              // showAll ={() => getAllProperties()}
           />
           <div className="top-texts">
               <h2>Stays in Finland</h2>
               <p>{items.length}+ Stays</p>
           </div>
-          <CardComponent />
+                <CardComponent/>
       </div>
   )
 }
