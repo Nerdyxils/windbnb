@@ -4,15 +4,15 @@ import { AiOutlineMinusSquare } from 'react-icons/ai'
 
 import './guest.style.css'
 
-export default function Guest({ changeChildren, changeAdults, adults, Children }) {
+export default function Guest({ changeAdults, changeChildren, adults, children }) {
 
     const [numAdults, setNumAdults] = useState(adults);
-    const [numChildren, setNumChildren] = useState(Children);
+    const [numChildren, setNumChildren] = useState(children);
 
     useEffect(() => {
         changeAdults(numAdults);
         changeChildren(numChildren)
-    }, [numAdults, numChildren, changeAdults, changeChildren])
+    }, [numChildren, numAdults, changeAdults, changeChildren]);
 
     return (
         <div className="guest_selector">

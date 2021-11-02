@@ -23,11 +23,13 @@ export default function MainBody() {
     }, []);
 
     const getFilteredData = (children, adults, city) => {
+
         const totalGuests = children + adults;
 
         if (totalGuests === 0) {
             setItems(data.filter((property) => property.city === city));
         }
+
         if (totalGuests !== 0) {
             if (!city)
             setItems(
@@ -36,7 +38,8 @@ export default function MainBody() {
             else {
                 setItems(
                     data.filter(
-                        (property) => property.maxGuests === totalGuests && property.city === city
+                        (property) => 
+                            property.maxGuests === totalGuests && property.city === city
                     )
                 )
             }
@@ -45,18 +48,21 @@ export default function MainBody() {
     };
 
     return (
-        <div>
+        <>
             <HeaderComponent 
                 place={location}
                 changeCity={(val) => changeCity(val)}
-                getFilteredData={(children, adults, city) => getFilteredData(children, adults, city)}
+                getFilteredData={(children, adults, city) => 
+                    getFilteredData(children, adults, city)}
                 showAll ={() => getAllProperties()}
             />
             <div className="top-texts">
                 <h2>Stays in Finland</h2>
                 <p>{items.length}+ Stays</p>
             </div>
+            
             <CardComponent />
-        </div>
+            
+        </>
     )
 }

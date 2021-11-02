@@ -36,7 +36,7 @@ export default function SearchBar({ place, getFilteredData }) {
             <button className="input_single" onClick={() => openAndSetMenu("locationMenu")}>
                 {location ? <p className="locale">{location}, Finland</p> : 'Add city'}
             </button>
-            <button className="guest" onClick={() => openAndSetMenu("guestsMenu")}>
+            <button className="guest" onClick={() => openAndSetMenu("guest")}>
                 {numAdults === 0 && numChildren === 0 ? "Add guests" :
                     <p className="numGuests">{numAdults + numChildren} guests</p>
                 }
@@ -70,9 +70,8 @@ export default function SearchBar({ place, getFilteredData }) {
                     children={numChildren}
                     changeAdultsNum={(num) => setNumAdults(num)}
                     changeChildrenNum={(num) => setNumChildren(num)}
-                    getFilteredData={(numAdults, numChildren, pickedLocation) => 
-                        getFilteredData(numAdults, numChildren, pickedLocation)}
-                />
+                    getFilteredData={(numAdults, numChildren, pickedLocation)  => 
+                        getFilteredData(numAdults, numChildren, pickedLocation)}/>
             </Drawer>
         </>
     )

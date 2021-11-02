@@ -7,7 +7,7 @@ import './header.style.css'
 export default function HeaderComponent() {
     return (
         <div className="header">
-            <Logo/>
+            <Logo />
             <SearchBar />
         </div>
     )

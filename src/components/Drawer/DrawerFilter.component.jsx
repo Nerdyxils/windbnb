@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import Location from '../Location/location.component'
 import { FaSearch } from 'react-icons/fa'
+import { Divider } from '@mui/material'
 import Guest from '../Guest/guest.component'
 
 import './drawer.styles.css'
+import LocationsMenu from '../Location/location.component'
 
 const DrawerFilter = ({
     toggleShow, 
@@ -30,16 +31,18 @@ const DrawerFilter = ({
             <div className="overlay_nav">
                 <nav>
                     <div className="form_inputs">
-                        <div className="location locationBtn" onClick={() => setPickedMenu("locationMenu")}>
+                        <div className="location locationBtn" onClick={() => setPickedMenu("locationsMenu")}>
                             <span>LOCATION</span>
                             {pickedLocation ? <p className="location">{pickedLocation}, Finland</p> : "Add City"}
                         </div>
-
-                        <div className="guests" onClick={() => setPickedMenu("guestsMenu")}>
+                        <Divider orientation="vertical" flexItem />
+                        <div className="guests" onClick={() => setPickedMenu("guest")}>
                             <span>GUESTS</span>
-                            {numAdults === 0 && numChildren === 0 ? "Add guests" : <p className="numGuests">{numAdults + numChildren} guests</p>}
+                            {numAdults === 0 && numChildren === 0 
+                            ? "Add guests" 
+                            : <p className="numGuests">{numAdults + numChildren} guests</p>}
                         </div>
-
+                        <Divider orientation="vertical" flexItem />
                         <div className="search">
                             <button 
                                 onClick={() => {
@@ -47,7 +50,7 @@ const DrawerFilter = ({
                                     changeCity(pickedLocation);
                                     changeAdultsNum(numAdults);
                                     changeChildrenNum(numChildren);
-                                    getFilteredData(numAdults, numChildren, pickedLocation);
+                                    getFilteredData(numAdults, numChildren, pickedLocation)
                                 }}>
                                 <FaSearch />Search
                             </button>
@@ -55,7 +58,7 @@ const DrawerFilter = ({
                     </div>
                 </nav>
                 {pickedMenu === "locationMenu" ? (
-                    <Location cities={cities} pickCity={(city) => setPickedLocation(city)} />
+                    <LocationsMenu cities={cities} pickCity={(city) => setPickedLocation(city)} />
                 ) : (
                     <Guest 
                         adults={numAdults}
