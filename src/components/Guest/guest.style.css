@@ -1,10 +1,15 @@
-/* .guest_selector {
+.guest_selector {
     display: block;
-    float: center;
-} */
+    margin-top: 20px;
+}
+
+.selector {
+    margin-top: 20px;
+}
 .guest-tab h4 {
     font-size: 14px;
     color: #333;
+    font-family: var(--Font-sub);
     padding: 5px 0;
 }
 
@@ -25,7 +30,7 @@
     height: 28px !important;
 }
 
-.number p {
+.number span {
     padding-left: 10px;
     padding-right: 10px;
 }

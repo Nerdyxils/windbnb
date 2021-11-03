@@ -5,6 +5,7 @@
 }
 
 .btn_div button {
+    display: block;
     height: 55px;
     background: #fff;
     border: none;
