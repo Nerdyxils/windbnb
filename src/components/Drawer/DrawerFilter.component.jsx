@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { Divider } from '@mui/material'
 import Guest from '../Guest/guest.component'
+import LocationsMenu from '../Location/location.component'
 
 import './drawer.styles.css'
-import LocationsMenu from '../Location/location.component'
 
 const DrawerFilter = ({
     toggleShow, 

@@ -44,7 +44,6 @@ p {
   color: var(--Font-Color-Light);
 }
 
-
 .container {
   width: 95%;
   margin: 0 auto;
@@ -55,5 +54,39 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 0 50px 0;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 90%;
+    margin: 0 auto !important;
+  }
+
+  .header {
+    display: block;
+  }
+
+  .card-row {
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
