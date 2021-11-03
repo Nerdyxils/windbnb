@@ -81,6 +81,9 @@ const App = () => {
               })
             }
         </div>
+        <div className="footer_link">
+          <p>created by <a href="https://silas-abiodun.vercel.app/" target="_blank" rel="noreferrer">Nerdyxils</a>  - devChallenges.io</p>
+        </div>
       </div>
   )
 }
