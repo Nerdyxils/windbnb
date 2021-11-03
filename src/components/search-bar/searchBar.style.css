@@ -13,6 +13,22 @@
     color: #bdbdbd;
 }
 
+.search_icn {
+    position: relative !important;
+}
+
+.icn_btn {
+    align-self: center;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: var(--Main-Color-Red);
+}
+
 .input_single  {
     width: 150px;
     border-right: 1px solid #f2f2f2 !important;
@@ -29,12 +45,8 @@
     color: var(--Main-Color-Red);
 }
 
-
 /* big navigation */
 nav .search button {
-    display: flex;
-    align-items: center;
-    text-align: center;
     border: none;
     background-color: var(--Main-Color-Red);
     color: #fff;
@@ -72,5 +84,17 @@ nav .location-tab p {
 @media (max-width: 600px) {
     .btn_div {
         margin-top: 40px;
+    }
+
+    .input_single  {
+        width: 100%;
+    }
+    
+    .guest {
+        width: 100%;
+    }
+    
+    .search {
+        width: 100%;
     }
 }

@@ -41,8 +41,8 @@ export default function SearchBar({ place, getFilteredData }) {
                     <p className="numGuests">{numAdults + numChildren} guests</p>
                 }
             </button>
-            <button className="search" onClick={toggleShow(true)} >
-                <FaSearch /> 
+            <button className="search search_icn" onClick={toggleShow(true)} >
+                <FaSearch className="icn_btn" /> 
             </button>
         </div>
             
